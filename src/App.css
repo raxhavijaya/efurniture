@@ -8,7 +8,7 @@
   --card-bg-03: #ceebe9;
   --card-bg-04: #e2f2b2;
   --primary-color: #0a1d37;
-  --hero-bg: #d6e5fb;
+  --hero-bg: linear-gradient(to bottom right, #61c0be92, #dce487e7, #78f0aaca);
   --heading-fontSize: 2rem;
   --small-text-color: #999;
   --heading-text-color: #0a1d37;
@@ -55,11 +55,15 @@ a {
   color: unset;
 }
 
-img{
+img {
   width: 100%;
 }
 
-section{
+section {
   padding: 60px 0px;
 }
 
+.section__title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
