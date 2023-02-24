@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-.product__info h3{
+.product__info h3 {
   font-size: 1rem;
   color: var(--primary-color);
   font-weight: 600;
@@ -26,7 +26,7 @@
   font-size: 0.9rem;
 }
 
-.product__info h3:hover{
+.product__info h3:hover {
   color: #5ab680;
 }
 
@@ -44,4 +44,20 @@
   color: #fff;
   border-radius: 50px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  .product__info h3 a {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .product__info h3 a {
+    font-size: 1rem;
+  }
+
+  .product__card-bottom span i {
+    font-size: 1rem;
+  }
 }

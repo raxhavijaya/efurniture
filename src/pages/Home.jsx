@@ -22,7 +22,6 @@ const Home = () => {
   const [wirelessProducts, setWirelessProducts] = useState([]);
   const [popularProducts, setPopularProducts] = useState([]);
 
-
   const year = new Date().getFullYear();
 
   useEffect(() => {
@@ -41,7 +40,6 @@ const Home = () => {
     setMobileProducts(filteredMobileProducts);
     setWirelessProducts(filteredWirelessProducts);
     setPopularProducts(filteredPopularProducts);
-
   }, []);
 
   return (
@@ -58,11 +56,10 @@ const Home = () => {
                   corrupti consequatur facere molestias dignissimos iure!
                 </p>
                 <Link to="/shop">
-                <motion.button whileHover={{ scale: 1.1 }} className="buy__btn">SHOP NOW
-    
-    </motion.button>
+                  <motion.button whileHover={{ scale: 1.1 }} className="buy__btn">
+                    SHOP NOW
+                  </motion.button>
                 </Link>
-               
               </div>
             </Col>
             <Col lg="6" md="6">
@@ -97,7 +94,7 @@ const Home = () => {
       <section className="timer__count">
         <Container>
           <Row>
-            <Col lg="6" md="6">
+            <Col lg="6" md="12" className="count__down-col">
               <div className="clock__top-content">
                 <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
                 <h3 className="text-white fs-5 mb-2">Quality Armchair</h3>
@@ -110,8 +107,8 @@ const Home = () => {
                 </motion.button>
               </Link>
             </Col>
-            <Col lg="6" md="6" className="text-end">
-              <motion.img whileHover={{scale:1.1}} src={counterImg} alt="" />
+            <Col lg="6" md="12" className="text-end counter__img">
+              <motion.img whileHover={{ scale: 1.1 }} src={counterImg} alt="" />
             </Col>
           </Row>
         </Container>
@@ -129,13 +126,12 @@ const Home = () => {
       </section>
 
       <section className="popular__category">
-      <Container>
+        <Container>
           <Row>
             <Col lg="12" className="text-center mb-2">
               <h2 className="section__title">Popular Products</h2>
             </Col>
             <ProductList data={popularProducts} />
-            
           </Row>
         </Container>
       </section>
