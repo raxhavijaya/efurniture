@@ -4,25 +4,24 @@ import "./footer.css";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <Container>
         <Row>
-          <Col lg="4">
+          <Col lg="4" md="6" className="mb-3">
             <div className="logo">
               <div>
-                <h1 className="text-white">eNov</h1>
+                <h1 className="text-white">eNov Furniture</h1>
               </div>
             </div>
-            <p className="footer__text mt-4">
+            <p className="footer__text mt-3">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora accusamus voluptate saepe quos quibusdam officiis repellat facilis mollitia tenetur excepturi vitae odio temporibus,
               numquam, molestiae a accusantium non similique pariatur?
             </p>
           </Col>
-          <Col lg="3">
+          <Col lg="3" md="3" className="mb-3">
             <div className="footer__quick-links">
               <h4 className="quick__links-title">Top Categories</h4>
               <ListGroup>
@@ -41,7 +40,7 @@ const Footer = () => {
               </ListGroup>
             </div>
           </Col>
-          <Col lg="2">
+          <Col lg="2" md="3" className="mb-3">
             <div className="footer__quick-links">
               <h4 className="quick__links-title">Useful Links</h4>
               <ListGroup>
@@ -60,7 +59,7 @@ const Footer = () => {
               </ListGroup>
             </div>
           </Col>
-          <Col lg="3">
+          <Col lg="3" md="4">
             <div className="footer__quick-links">
               <h4 className="quick__links-title">Contact</h4>
               <ListGroup className="footer__contact">
