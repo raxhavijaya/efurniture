@@ -10,10 +10,18 @@
   justify-content: space-between;
 }
 
+.profile__btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .logo {
   display: flex;
   align-items: center;
   column-gap: 8px;
+  cursor: pointer;
 }
 
 .logo img {
@@ -75,10 +83,36 @@
   z-index: 10;
 }
 
-.nav__icons span img {
-  width: 30px;
-  height: 30px;
+.nav__icons .profile img {
+  width: 36px;
+  height: 36px;
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.nav__icons .profile {
+  position: relative;
+  z-index: 9;
+}
+
+.nav__icons .profile .profile__actions {
+  position: absolute;
+  top: 96%;
+  left: -40px;
+  width: 150px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--card-bg-01);
+  line-height: 30px;
+  border-radius: 8px;
+  display: none;
+  cursor: pointer;
+}
+
+.show__profileActions {
+  display: block !important;
 }
 
 .mobile__menu {
@@ -103,6 +137,12 @@
   background: #fff;
 }
 
+@media only screen and (max-width: 1024px) {
+  .nav__icons .profile .profile__actions {
+    left: -75px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .navigation {
     position: fixed;
@@ -115,12 +155,20 @@
     display: none;
   }
 
+  .nav__icons .profile .profile__actions {
+    left: -35px;
+    width: 130px;
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+
   .menu {
     position: absolute;
     top: 0;
     right: 0;
     width: 250px;
     height: 100%;
+    padding-left: 0;
     background: #fff;
     z-index: 99999;
     flex-direction: column;
@@ -163,5 +211,15 @@
     width: 100%;
     height: 60px;
     line-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .nav__icons .profile .profile__actions {
+    left: -60px;
+  }
+
+  .menu {
+    width: 200px;
   }
 }
