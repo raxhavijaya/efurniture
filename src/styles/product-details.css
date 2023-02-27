@@ -28,6 +28,13 @@
   cursor: pointer;
 }
 
+.product__details-img{
+ 
+  width: 500px;
+
+  height: 500px;
+}
+
 .active__tab {
   font-weight: 600;
 }
@@ -94,5 +101,10 @@ cursor: pointer;
 
   .rating__group {
     column-gap: 0.9rem !important;
+  }
+
+  .row{
+    align-items: center;
+    justify-content: center;
   }
 }

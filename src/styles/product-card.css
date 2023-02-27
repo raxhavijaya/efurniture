@@ -5,7 +5,8 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.product__img {
+.product__img img{
+  display: flex;
   width: 200px;
   height: 200px;
   margin: 0 auto;

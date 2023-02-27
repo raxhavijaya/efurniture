@@ -5,10 +5,12 @@ import CommonSection from "../components/UI/CommonSection";
 import { Link } from "react-router-dom";
 import "../styles/checkout.css";
 import { useSelector } from "react-redux";
+import useAuth from "../custom-hooks/useAuth";
 
 const Checkout = () => {
   const totalQty = useSelector((state) => state.cart.totalQuantity);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const { currentUser } = useAuth();
 
   return (
     <Helmet title="Checkout">
@@ -63,8 +65,12 @@ const Checkout = () => {
                   Total Cost: <span>${totalAmount}</span>
                 </h4>
                 <button className="buy__btn auth__btn w-100">
-                  {" "}
-                  <Link to="/login">Place an order</Link>
+                {currentUser ? (
+                    <div>Place an order</div>
+                  ) : (
+                    <Link to="/login">Place an order</Link>
+                  )}
+                  
                 </button>
               </div>
             </Col>
