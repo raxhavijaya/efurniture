@@ -41,6 +41,7 @@ const ProductDetails = () => {
     };
 
     getProduct();
+    // eslint-disable-next-line
   }, []);
 
   const {
