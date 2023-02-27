@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../redux/slices/cartSlice";
 
+
 const ProductCard = ({ item }) => {
   const dispatch = useDispatch();
 
@@ -23,7 +24,7 @@ const ProductCard = ({ item }) => {
       })
     );
 
-    toast.success("Product added succesfully");
+    toast.success("Product added successfully");
   };
 
   return (
