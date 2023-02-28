@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Spinner } from "reactstrap";
 import { db } from "../firebase.config";
 import { doc, deleteDoc } from "firebase/firestore";
 
@@ -32,7 +32,7 @@ const AllProducts = () => {
               </thead>
               <tbody>
                 {loading ? (
-                  <h4 className="py-5 text-center fw-bold">Loading....</h4>
+                  <Spinner className="m-auto mt-5">Loading...</Spinner>
                 ) : (
                   productsData.map((item) => (
                     <tr key={item.id}>
