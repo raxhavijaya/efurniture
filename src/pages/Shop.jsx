@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CommonSection from "../components/UI/CommonSection";
 import Helmet from "../components/Helmet/Helmet";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Spinner } from "reactstrap";
 
 import "../styles/shop.css";
 import ProductList from "../components/UI/ProductList";
@@ -112,7 +112,7 @@ const Shop = () => {
       </section>
       <section className="pt-0">
         <Container>
-          <Row>{loading ? <h5>Loading....</h5> : productsData.length === 0 ? <h1 className="text-center fs-4">No products are found!</h1> : <ProductList data={productsData} />}</Row>
+          <Row>{loading ? <Spinner className="m-auto mt-5">Loading...</Spinner> : productsData.length === 0 ? <h1 className="text-center fs-4">No products are found!</h1> : <ProductList data={productsData} />}</Row>
         </Container>
       </section>
     </Helmet>

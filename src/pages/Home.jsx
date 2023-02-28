@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import Helmet from "../components/Helmet/Helmet";
 import "../styles/home.css";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Spinner } from "reactstrap";
 import heroImg from "../assets/images/hero-img.png";
 
 import Services from "../services/Services";
@@ -81,7 +81,7 @@ const Home = () => {
             <Col lg="12" className="text-center mb-2">
               <h2 className="section__title">Trending Products</h2>
             </Col>
-            {loading ? <h5 className="fw-bold">Loading...</h5> : <ProductList data={trendingProducts} />}
+            {loading ? <Spinner className="m-auto mt-5">Loading...</Spinner> : <ProductList data={trendingProducts} />}
           </Row>
         </Container>
       </section>
@@ -91,7 +91,7 @@ const Home = () => {
             <Col lg="12" className="text-center mb-2">
               <h2 className="section__title">Best Sales</h2>
             </Col>
-            {loading ? <h5 className="fw-bold">Loading...</h5> : <ProductList data={bestSalesProducts} />}
+            {loading ? <Spinner className="m-auto mt-5">Loading...</Spinner> : <ProductList data={bestSalesProducts} />}
           </Row>
         </Container>
       </section>
@@ -123,8 +123,8 @@ const Home = () => {
             <Col lg="12" className="text-center mb-2">
               <h2 className="section__title">New Arrivals</h2>
             </Col>
-            {loading ? <h5 className="fw-bold">Loading...</h5> : <ProductList data={mobileProducts} />}
-            {loading ? <h5 className="fw-bold">Loading...</h5> : <ProductList data={wirelessProducts} />}
+            {loading ? <Spinner className="m-auto mt-5">Loading...</Spinner> : <ProductList data={mobileProducts} />}
+            {loading ? <Spinner className="m-auto mt-5">Loading...</Spinner> : <ProductList data={wirelessProducts} />}
           </Row>
         </Container>
       </section>
@@ -135,7 +135,7 @@ const Home = () => {
             <Col lg="12" className="text-center mb-2">
               <h2 className="section__title">Popular Products</h2>
             </Col>
-            {loading ? <h5 className="fw-bold">Loading...</h5> : <ProductList data={popularProducts} />}
+            {loading ? <Spinner className="m-auto mt-5">Loading...</Spinner> : <ProductList data={popularProducts} />}
           </Row>
         </Container>
       </section>
